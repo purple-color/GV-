@@ -6,6 +6,10 @@ li {
     list-style: none;
     
 }
+a {
+    text-decoration:none;
+    color: rgba(212, 148, 63, 0.835);
+}
 html, body, .box, .content-box{
     width: 100%;
     height: 100%;
@@ -64,8 +68,8 @@ html, body, .box, .content-box{
 }
 .body-info .me {
     width: 100%;
-    height: 200px;
-    padding: 20px 0;
+    height: 150px;
+    padding: 40px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -126,7 +130,10 @@ html, body, .box, .content-box{
 }
 .body-pro .content {
     margin-left: 50%;
-    padding-top: 100px;
+    padding-top: 20px;
+}
+.body-pro .content .a {
+    color : black;
 }
 .body-pro .content .qq {
     font-size: 18px;
@@ -160,6 +167,12 @@ html, body, .box, .content-box{
 
 @media screen and (max-width: 600px) {
     /* 设置导航栏样式 */
+    * {
+        font-size: 14px;
+    }
+    .wrapper {
+        height:30px !important;
+    }
     .wraper .nav { 
        display: flex;
        justify-content: flex-start;
@@ -196,6 +209,10 @@ html, body, .box, .content-box{
         margin: auto;
         background: rgba(255, 255, 255, 0.7);
     }
+    .body-info .info {
+        width:300px;
+        margin: 200px auto 0;
+    }
 
     /* 专业技能样式 */
     .body-skill {
@@ -219,9 +236,8 @@ html, body, .box, .content-box{
     .body-skill .bg-skill .content {
         position: absolute;
         left: 10%;
-        top: 10%;
+        top: 40px;
         right: 10%;
-        bottom: 10%;
         margin: auto;
     }
 
@@ -232,9 +248,11 @@ html, body, .box, .content-box{
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        width: 100%;
+        height: 100%;
     }
     .body-pro .bg-pro {
-        position: absolute;
+        /* position: absolute; */
         width: 100%;
         height: 100%;
         left: 0;
@@ -246,11 +264,14 @@ html, body, .box, .content-box{
     }
     .body-pro .bg-pro .content {
         position: absolute;
-        left: 10%;
-        top: 10%;
-        right: 10%;
-        bottom: 10%;
-        margin: auto;
+        margin-left: 10px;
+    }
+    .body-pro .bg-pro .content .qq {
+        margin-top:5px;
+        /* padding:15px 0 0 0 ; */
+    }
+    .body-pro .bg-pro .content p {
+        margin-top:10px;
     }
 
     /* 自我介绍样式 */
@@ -274,10 +295,11 @@ html, body, .box, .content-box{
     }
     .body-me .bg-me .content {
         position: absolute;
-        left: 10%;
-        top: 10%;
-        right: 10%;
-        bottom: 10%;
+        /* width: 100%;
+        height:100%; */
+        padding-top: 0;
+        left: 10px;
+        top: 50px;
         margin: auto;
     }
 }
