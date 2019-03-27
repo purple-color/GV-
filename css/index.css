@@ -13,7 +13,7 @@ a {
 html, body, .box, .content-box{
     width: 100%;
     height: 100%;
-    color: gray;
+    color:rgb(66, 66, 66);
     font-size: 16px;
 }
 
@@ -23,27 +23,22 @@ html, body, .box, .content-box{
     left: 0;
     top: 0;
     width: 100%;
-    height: 40px;
-    background-color: rgb(192, 185, 185);
+    height: 44px;
+    background-color: rgb(255, 255, 255, 0.5);
     z-index: 99;
+    color: white;
 }
 .wraper .nav {
-    display: flex;
     width: 100%;
     height: 100%;
-    justify-content: space-between;
-    align-items: center;
-}
-.wraper .nav .img {
-    flex: 1;
-}
-.wraper .nav .img img {
-    width:30px;
-    padding-left: 20px;
+    text-align: center;
 }
 .wraper .nav ul {
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex: 1;
+    justify-content: space-around;
+    align-items: center;
     cursor: pointer;
 }
 .wraper .nav ul .current {
@@ -51,44 +46,37 @@ html, body, .box, .content-box{
     font-weight: bolder;
 }
 .wraper .nav ul li {
-    flex: 1; 
+    line-height: 44px;
+    font-size: 16px;
 }
-
 
 /* 首页 */
-.body-info {
+.body {
     width: 100%;
     height: 100%;
-    background-image: url('../imgs/bg1.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    z-index: 98;
+    padding-top: 44px;
+    box-sizing: border-box;
+    background: linear-gradient( 180deg, #2AFADF 10%, #4C83FF 100%);
+
 }
-.body-info .me {
-    width: 100%;
-    height: 150px;
-    padding: 40px 0;
+.body .bg-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    position: relative;
 }
-.body-info .me img {
+.body .bg-info .me img {
     width: 100px;
     border-radius: 50% 50%;
-    margin-bottom: 10px;
 }
-.body-info .info {
+.body .bg-info .info {
+    width: 252px;
+    top: 130px;
+    left: 50%;
+    margin-left: -100px;
+    flex: 1;
     position: absolute;
-    width: 300px;
-    height: 300px;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
 }
 .body-info .info p {
     margin: 10px 0;
@@ -98,45 +86,51 @@ html, body, .box, .content-box{
     vertical-align: middle;
 }
 
-/* 专业技能 */
+/* 个人技术栈 */
 .body-skill {
     width: 100%;
     height: 100%;
-    background: url('../imgs/bg2.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background: linear-gradient( 90deg, #FFA6B7 10%, #1E2AD2 100%);
+}
+.body-skill .bg-skill{
+    text-align: center;
+
 }
 .body-skill .content {
-    margin-left: 20%;
-    padding-top: 150px;
+    display: inline-block;
+    margin: 50px auto;
+    text-align: left;
 }
 .body-skill .skill {
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 18px;
 }
 .body-skill p{
     margin: 10px 0;
 }
-
 /* 项目经验 */
 .body-pro {
     width: 100%;
     height: 100%;
-    background: url('../imgs/bg3.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background: radial-gradient(ellipse, #C2FFD8 10%, #465EFB 100%);
 }
-.body-pro .content {
-    margin-left: 50%;
-    padding-top: 20px;
+.body-pro .bg-pro {
+    display: flex;
+    justify-content: center;;
+    text-align: center;
 }
-.body-pro .content .a {
-    color : black;
+.body-pro .bg-pro .content{
+    width: 570px;;
+    text-align: left;
 }
+
 .body-pro .content .qq {
     font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0 0;
+}
+.body-pro .content .app {
+    font-size: 16px;
     font-weight: bold;
     padding: 10px 0 0;
 }
@@ -148,14 +142,17 @@ html, body, .box, .content-box{
 .body-me {
     width: 100%;
     height: 100%;
-    background: url('../imgs/bg4.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-image: radial-gradient( ellipse, rgb(176, 238, 245) 10%, rgb(81, 245, 223) 100%);
+}
+.body-me .bg-me{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .body-me .content {
-    margin-left: 10%;
-    padding-top: 300px;
+    width: 570px;
 }
 .body-me .content .me {
     font-size: 18px;
@@ -165,62 +162,63 @@ html, body, .box, .content-box{
     margin: 20px 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
     /* 设置导航栏样式 */
     * {
-        font-size: 14px;
+        margin: 0;
+        padding: 0;
+        font-size: 3.73vw;
     }
     .wrapper {
-        height:30px !important;
+        width: 100%;
+        height: 11.73vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        background-color: rgb(147, 248, 255);
     }
     .wraper .nav { 
        display: flex;
        justify-content: flex-start;
        align-items: center;
     }
-    .wraper .nav .img {
-        flex: 2;
-    }
-    .wraper .nav ul {
-        flex: 10;
-    }
     .wraper .nav li {
-        font-size: 14px;
         text-align: center;
     }
 
     /* 首页样式 */
-    .body-info {
-        position: relative;
-        background: url('../imgs/bg1.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        
+    .body-info, .bg-info {
+        width: 100%;
+        height: 100%; 
+        background: linear-gradient( 180deg, #2AFADF 10%, #4C83FF 100%);    
     }
     .body-info .bg-info {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        background: rgba(255, 255, 255, 0.7);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-    .body-info .info {
+    .body-info .bg-info .me img{
+        width: 37.5vw;
+        border-radius: 50%;
+    }
+    .body .bg-info .info {
+        width: 67.2vw;
+        top: 34.66vw;
+        left: 0%;
+        margin-left: -50px;
+        flex: 1;
+        position: absolute;
+    }
+    /* .body-info .info {
         width:300px;
         margin: 200px auto 0;
-    }
+    } */
 
     /* 专业技能样式 */
     .body-skill {
         position: relative;
-        background: url('../imgs/bg2.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
     }
     .body-skill .bg-skill {
         position: absolute;
@@ -243,64 +241,32 @@ html, body, .box, .content-box{
 
     /* 项目经验样式 */
     .body-pro {
-        position: relative;
-        background: url('../imgs/bg3.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
         width: 100%;
         height: 100%;
+        box-sizing: border-box;
+        padding: 0 8vw 8vw;
     }
     .body-pro .bg-pro {
-        /* position: absolute; */
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        background: rgba(255, 255, 255, 0.7);
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
-    .body-pro .bg-pro .content {
-        position: absolute;
-        margin-left: 10px;
-    }
-    .body-pro .bg-pro .content .qq {
-        margin-top:5px;
-        /* padding:15px 0 0 0 ; */
-    }
-    .body-pro .bg-pro .content p {
-        margin-top:10px;
-    }
-
     /* 自我介绍样式 */
     .body-me {
-        position: relative;
-        background: url('../imgs/bg4.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
-    .body-me .bg-me {
-        position: absolute;
         width: 100%;
         height: 100%;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        background: rgba(255, 255, 255, 0.7);
+        box-sizing: border-box;
+        padding: 0 8vw 8vw;
+    }
+    .body-me .bg-me {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .body-me .bg-me .content {
-        position: absolute;
-        /* width: 100%;
-        height:100%; */
-        padding-top: 0;
-        left: 10px;
-        top: 50px;
-        margin: auto;
+
     }
 }
 
