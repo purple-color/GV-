@@ -51,7 +51,7 @@ html, body, .box, .content-box{
 }
 
 /* 首页 */
-.body {
+.body-info {
     width: 100%;
     height: 100%;
     padding-top: 44px;
@@ -59,18 +59,18 @@ html, body, .box, .content-box{
     background: linear-gradient( 180deg, #2AFADF 10%, #4C83FF 100%);
 
 }
-.body .bg-info {
+.body-info .bg-info {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     position: relative;
 }
-.body .bg-info .me img {
+.body-info .bg-info .me img {
     width: 100px;
     border-radius: 50% 50%;
 }
-.body .bg-info .info {
+.body-info .bg-info .info {
     width: 252px;
     top: 130px;
     left: 50%;
